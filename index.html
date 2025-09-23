@@ -1,4 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  </head>
   <body>
     <div id="app"></div>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -8,14 +12,18 @@
     <script type="text/jsx">
       const app = document.getElementById("app")
 
-      function Header() {
-        return (<h1>Develop. Preview. Ship.</h1>)
+      function Header({title}) {
+        console.log(title);
+        //{title: "React"}
+        return <h1>title</h1>;
       }
 
       function Homepage(){
-        return <div>
-          <Header />
-        </div>;
+        return (
+          <div>
+          <Header title="React" />
+          </div>
+        );
       }
       const root = ReactDOM.createRoot(app);
       root.render(<Header />);
